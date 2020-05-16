@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'index');
+
+Auth::routes();
+
+Route::get('index','Web\PageController@index')->name('index');

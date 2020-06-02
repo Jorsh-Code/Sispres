@@ -42,6 +42,22 @@ header nav ul li span{
 header nav ul li a:hover{
     background-color: rgba(255, 255, 255, .1);
 }
+
+.sesion-c:hover ul{
+    display: block;
+}
+
+nav li ul {
+    background-color: black;
+    position: absolute;
+    display: none;
+}
+
+nav ul li ul li a{
+    padding: 17.8px;
+}
+
+
 .menu-bar{
     display: none;
 }
@@ -63,6 +79,29 @@ header nav ul li a:hover{
 
 .logo a:hover{
     color: rgb(0, 197, 197);
+}
+
+.info , .error{
+    max-width: 523px;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+    padding: 10px 30px;
+    font-family: sans-serif;
+
+
+}
+
+.info{
+    background-color: rgba(128, 255, 0, 0.582);
+    text-align: justify;
+}
+
+.error{  
+    background-color: tomato;
+    text-align: left;
 }
 
 @font-face{
@@ -90,6 +129,10 @@ section{
         display: block;
         border-bottom: 1px solid rgba(255, 255, 255, .3);
     }
+    nav ul li ul{
+        position: relative;   
+    }
+
     header nav ul li:hover{
         background-color: rgba(255, 255, 255, .1);
     }

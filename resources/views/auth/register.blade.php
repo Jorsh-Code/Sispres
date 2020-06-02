@@ -8,16 +8,6 @@
 
 @section('content')
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-dafault">
-            </div>
-        </div>
-
-    </div>
-</div>
-<section>
     <div class="containerF">
         <form method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
@@ -74,5 +64,5 @@
 
         </form>
     </div>
-</section>
+
 @endsection

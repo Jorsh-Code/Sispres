@@ -13,7 +13,7 @@
     overflow: hidden;
     border: 2px solid rgb(3, 235, 235);
     border-radius: 3px;
-    
+    outline: none;
 }
 
 .btn-s:hover{

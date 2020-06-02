@@ -53,6 +53,7 @@ input {
     font-size: 18px;
     border-radius: 3px;
     padding-left: 10px;
+    outline: #636b6f;
     color: #636b6f;
 }
 
@@ -79,7 +80,7 @@ input:not(.input-file):hover {
 .m-error {
     display: block;
     width: 100%;
-    color: rgb(175, 25, 25);
+    color: #a94442;
     text-align: justify;
     /*  background-color: royalblue;*/
     font-family: sans-serif;
@@ -96,10 +97,13 @@ input:not(.input-file):hover {
 }
 
 .s-error {
-    border-color: rgb(175, 25, 25);
+    border-color: #a94442;
     margin-bottom: 0;
 }
 
+.s-error:not(input){
+    color:  #a94442;
+}
 @media screen and (max-width: 575px) {
     .container {
         max-width: none;

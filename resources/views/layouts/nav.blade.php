@@ -19,7 +19,7 @@
         <div class="menu-bar">
 
             <p class="menu-logo">
-                Sispres
+                <a href="{{ url('/') }}">Sispres</a>
                 <span id="btn-show" class="icon-list-bullet"></span>
             </p>
 
@@ -32,17 +32,48 @@
             <ul>
 
                 @guest
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
-                
+                <li><a href="{{ route('login') }}">Iniciar sesión</a></li>
+                <li><a href="{{ route('register') }}">Registrarse</a></li>
+                @else
+                <li><a href="#">hola</a></li>
+                <li class="sesion-c"><a href="#"> {{ Auth::user()->name }}</a>
+                    <ul>
+                        <li>
+                            <a href="{{ route('logout') }}" id="c-s" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">Cerrar sesión
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
                 @endguest
 
             </ul>
         </nav>
-        
+
     </header>
-    
-    @yield('content')
+    <section>
+        @if(session('info'))
+        <div class="info">
+            <p>{{ session('info') }}</p>
+        </div>
+        @endif
+
+        @if(count($errors))
+        <div class="error">
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        
+        @yield('content')
+    </section>
+
     <script src="{{ asset('js/nav.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

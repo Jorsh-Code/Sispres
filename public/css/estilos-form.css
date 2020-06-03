@@ -54,8 +54,7 @@ input:not(.check){
     border-radius: 3px;
     padding-left: 10px;
     color: #636b6f;
-    
-     outline-color: #4caeff; 
+    outline-color: #4caeff; 
 }
 
 .div-remember{
@@ -65,8 +64,9 @@ input:not(.check){
 .remember-link{
     color: #4caeff;
 }
-.input-file{
+.input-file:not(.check){
     border: none;
+    outline: none;
     padding-top: 3px;
 }
 

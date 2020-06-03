@@ -15,4 +15,10 @@ Route::redirect('/', 'index');
 
 Auth::routes();
 
+//Web
 Route::get('index','Web\PageController@index')->name('index');
+
+
+//Verification
+Route::resource('alumno', 'Student\StudentController');
+
